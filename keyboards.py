@@ -1,3 +1,4 @@
+#You must create this file in the app folder, which will be in the project folder.
 from aiogram.types import (ReplyKeyboardMarkup, KeyboardButton,
                            InlineKeyboardMarkup, InlineKeyboardButton)
 
