@@ -1,23 +1,18 @@
 from aiogram.types import (ReplyKeyboardMarkup, KeyboardButton,
                            InlineKeyboardMarkup, InlineKeyboardButton)
 
-
-bank = ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text='альфа банк'),
-                                     KeyboardButton(text='т банк')],
-                                     [KeyboardButton(text='сбербанк'),
-                                      KeyboardButton(text='есть все')],
-                                     [KeyboardButton(text='нет ничего')]],
-                           resize_keyboard=True,
-                           input_field_placeholder='выберите банк...')
-
-
-ppp = ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text='от друга'),
-                                     KeyboardButton(text='из ютуба')],
-                                    [KeyboardButton(text='другое')]],
-                          resize_keyboard=True,
-                          input_field_placeholder='выберите откуда узнал о нас...')
+#creating buttons
+#These buttons send messages to the chat with the bot.
+choice = ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text='no'),  #writing the text of the buttons
+                                        KeyboardButton(text='yes')] #writing the text of the buttons
+                                      ]
+                             resize_keyboard=True, #changing the keyboard size
+                             input_field_placeholder='') #choose what will be displayed on the line when the user enters the text
 
 
-age = ReplyKeyboardMarkup(keyboard=[[KeyboardButton(text='больше 18'),
-                                     KeyboardButton(text='меньше 18')]],
-                          resize_keyboard=True)
+catalog = InlineKeyboardMarkup(inline_keyboard=[
+    [InlineKeyboardButton(text='кепка', callback_data='cap')],
+    [InlineKeyboardButton(text='шорты', callback_data='shorts')],
+    [InlineKeyboardButton(text='футболка', callback_data='t-shirt')]
+    ]
+)
